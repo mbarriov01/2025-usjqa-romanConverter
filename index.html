@@ -13,15 +13,20 @@
     gtag('config', 'G-GFC1BHD1GN');
   </script>
   <script>
-    function checkResult() {
-      // Calculate the conversion of the number
-      conversion = handleConversion();
-
-      gtag('event', 'converted_value', {
-        'Converted value': conversion
+    document.getElementById('conversionMode').addEventListener('change', function(e) {
+      gtag('event', 'mode_changed', {
+        'new_mode': e.target.value
       });
-      
-    }
+    });
+
+  document.getElementById('convertButton').addEventListener('click', function() {
+    const mode = document.getElementById('conversionMode').value;
+    const input = document.getElementById('inputValue').value.trim();
+    gtag('event', 'conversion_attempt', {
+        'conversion_mode': mode,
+        'input_value': input
+      });
+    });
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
