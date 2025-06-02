@@ -142,5 +142,5 @@ function handleConversion() {
 }
 
 // Attach an event listener to the convert button to trigger the conversion when clicked.
-document.getElementById('convertButton').addEventListener('click', handleConversion);
+// document.getElementById('convertButton').addEventListener('click', handleConversion);
 
