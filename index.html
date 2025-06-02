@@ -3,12 +3,25 @@
 <head>
   <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-GFC1BHD1GN"></script>
+  <!-- Link to the external JavaScript file -->
+  <script src="script.js"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
   
     gtag('config', 'G-GFC1BHD1GN');
+  </script>
+  <script>
+    function checkResult() {
+      // Calculate the conversion of the number
+      conversion = handleConversion();
+
+      gtag('event', 'converted_value', {
+        'Converted value': conversion
+      });
+      
+    }
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -117,9 +130,6 @@
     <!-- Div to display error messages -->
     <div class="error" id="error"></div>
   </div>
-  
-  <!-- Link to the external JavaScript file -->
-  <script src="script.js"></script>
 </body>
 </html>
 
