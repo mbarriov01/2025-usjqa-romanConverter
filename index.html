@@ -11,6 +11,9 @@
     gtag('config', 'G-GFC1BHD1GN');
   </script>
   <script>
+    <!-- Link to the external JavaScript file -->
+    <script src="script.js" defer></script>
+    
     document.getElementById('conversionMode').addEventListener('change', function(e) {
       gtag('event', 'mode_changed', {
         'new_mode': e.target.value
@@ -133,9 +136,6 @@
     <!-- Div to display error messages -->
     <div class="error" id="error"></div>
   </div>
-  
-  <!-- Link to the external JavaScript file -->
-  <script src="script.js"></script>
 </body>
 </html>
 
